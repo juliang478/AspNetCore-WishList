@@ -9,7 +9,7 @@
 <ul class="list-group">
     @foreach (var items in Model)
     {
-    <li class="list-group">@items.Description 
+    <li class="list-group">@items.Description>
         <a asp-action="delete" asp-route="Id">delete</a>
     </li>
     }
