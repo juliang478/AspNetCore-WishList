@@ -1,5 +1,4 @@
-﻿@page
-@model WishList.Models.Item
+﻿@model List<WishList.Models.Item>
 @{
     ViewData["Title"] = "Index";
 }
@@ -8,10 +7,11 @@
 <a asp-action="Create">Add Item</a>
 
 <ul class="list-group">
-    @foreach (var items in Model.Description)
+    @foreach (var items in Model)
     {
-        <li class="list-group">@items</li>
-        <a asp-action="delete" asp-route="Id">Delete</a>
+    <li class="list-group">@items.Description 
+        <a asp-action="delete" asp-route="Id">delete</a>
+    </li>
     }
 </ul>
 
