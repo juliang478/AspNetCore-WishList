@@ -7,11 +7,9 @@
 <a asp-action="Create">Add Item</a>
 
 <ul class="list-group">
-    @foreach (var items in Model)
+    @foreach (var item in Model)
     {
-    <li class="list-group">@items.Description>
-        <a asp-action="delete" asp-route="Id">delete</a>
-    </li>
+        <li>@item.Description <a asp-action="delete" asp-route-id="Id">delete</a></li>
     }
 </ul>
 
